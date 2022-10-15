@@ -53,12 +53,17 @@ void DisplayMenu::subMenu(std::string operationType)
         std::cout << "Podaj ilosc: " << std::endl;
         std::cin >> amount;
 
+        if (operationType == "kupic")
+        {
+            float bleble = _userRef.buy(codeTarget, amount);
+            std::cout << "Do zaplaty  " << bleble << "  PLN. " << std::endl;
 
-        float bleble = _userRef.buy(codeTarget, amount);
-        std::cout << "Do zaplaty  " << bleble << "  PLN. " << std::endl;
-
-        // system("cls");
-
+        }
+        else if (operationType == "sprzedac")
+        {
+            float blabla = _userRef.sell(codeTarget, amount);
+            std::cout << "Wymieniona kwota to: " << blabla << "  PLN. " << std::endl;
+        }
 
     } while (currencyTarget != 0);
 }

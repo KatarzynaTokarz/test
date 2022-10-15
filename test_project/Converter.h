@@ -15,12 +15,12 @@ public:
 		return wynik;
 
 	}
-	//float calculatesell(float amount, Currency::Currencycode currCodeSource)
-	//{
-	//	std::map<Currency::Currencycode, Currency> rates = tempratesretriever.getrates();
+	float calculateSell(float amount, Currency::CurrencyCode currCodeSource)
+	{
+		std::map<Currency::CurrencyCode, Currency> rates = tempRatesRetriever.getRates();
 
-	//	float wynik = amount *(1/(rates[currencytarget].getsellprice()));
-	//	return wynik;
-	//}
+		float wynik = amount * (1 / (rates[currCodeSource].getSellPrice()));
+		return wynik;
+	}
 
 };

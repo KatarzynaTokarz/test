@@ -19,10 +19,10 @@ public:
         float value = converter1.calculateBuy(amount, currCodeSource);
         return value;
     }
-    //    float sell(Currency::CurrencyCode currCodeSource, float amount) {
-    //        float value = converter1.calculatesell(amount, currCodeSource);
-    //        return value;
-    //    }
+    float sell(Currency::CurrencyCode currCodeSource, float amount) {
+        float value = converter1.calculateSell(amount, currCodeSource);
+        return value;
+    }
 };
 
 class DisplayMenu

@@ -13,7 +13,7 @@ class Currency
 public:
 	Currency(std::string currencyTarget, std::string codeName, float buyPrice, float sellPrice);
 	Currency();
-	enum class CurrencyCode // do usuniecia jak zrobimy enum class gdzies nad Currency
+	enum class CurrencyCode
 	{
 		EUR, USD, GBP, CHF, PLN
 	};
@@ -26,3 +26,4 @@ public:
 	//void to_json(json& j, const Currency& s);
 	//void from_json(const json& j, Currency& s);
 };
+
